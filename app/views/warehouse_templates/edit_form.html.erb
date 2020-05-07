@@ -4,33 +4,23 @@
 
 <hr>
 
-<!-- Form warehouse start -->
 <form action="/update_warehouse/<%= @warehouse.id %>" method="post">
-<!-- Form warehouse end -->
 
-  <!-- Label and input for location_name start -->
   <div class="form-group">
     <label for="location_name">
       Location name
     </label>
 
-    <!-- Input for location_name start -->
     <input type="text" id="location_name" name="location_name" class="form-control" value="<%= @warehouse.location_name %>">
-    <!-- Input for location_name end -->
   </div>
-  <!-- Label and input for location_name end -->
 
-  <!-- Label and input for location start -->
   <div class="form-group">
     <label for="location">
       Location
     </label>
 
-    <!-- Input for location start -->
     <input type="text" id="location" name="location" class="form-control" value="<%= @warehouse.location %>">
-    <!-- Input for location end -->
   </div>
-  <!-- Label and input for location end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update warehouse

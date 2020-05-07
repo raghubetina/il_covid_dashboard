@@ -1,167 +1,110 @@
-<!-- Form warehouse_entry start -->
 <form action="/create_warehouse_entry_from_warehouse" method="post">
-<!-- Form warehouse_entry end -->
 
-  <!-- Label and input for number_anterior_swabs_received_24_hour start -->
   <div class="form-group">
     <label for="number_anterior_swabs_received_24_hour">
       Number anterior swabs received 24 hour
     </label>
 
-    <!-- Input for number_anterior_swabs_received_24_hour start -->
     <input type="text" id="number_anterior_swabs_received_24_hour" name="number_anterior_swabs_received_24_hour" class="form-control" value="<%= @warehouse_entry.number_anterior_swabs_received_24_hour %>">
-    <!-- Input for number_anterior_swabs_received_24_hour end -->
   </div>
-  <!-- Label and input for number_anterior_swabs_received_24_hour end -->
 
-  <!-- Label and input for number_anterior_swabs_sent_24_hour start -->
   <div class="form-group">
     <label for="number_anterior_swabs_sent_24_hour">
       Number anterior swabs sent 24 hour
     </label>
 
-    <!-- Input for number_anterior_swabs_sent_24_hour start -->
     <input type="text" id="number_anterior_swabs_sent_24_hour" name="number_anterior_swabs_sent_24_hour" class="form-control" value="<%= @warehouse_entry.number_anterior_swabs_sent_24_hour %>">
-    <!-- Input for number_anterior_swabs_sent_24_hour end -->
   </div>
-  <!-- Label and input for number_anterior_swabs_sent_24_hour end -->
 
-  <!-- Label and input for number_outstanding_orders_anterior_swabs start -->
   <div class="form-group">
     <label for="number_outstanding_orders_anterior_swabs">
       Number outstanding orders anterior swabs
     </label>
 
-    <!-- Input for number_outstanding_orders_anterior_swabs start -->
     <input type="text" id="number_outstanding_orders_anterior_swabs" name="number_outstanding_orders_anterior_swabs" class="form-control" value="<%= @warehouse_entry.number_outstanding_orders_anterior_swabs %>">
-    <!-- Input for number_outstanding_orders_anterior_swabs end -->
   </div>
-  <!-- Label and input for number_outstanding_orders_anterior_swabs end -->
 
-  <!-- Label and input for current_inv_anterior_swabs start -->
   <div class="form-group">
     <label for="current_inv_anterior_swabs">
       Current inv anterior swabs
     </label>
 
-    <!-- Input for current_inv_anterior_swabs start -->
     <input type="text" id="current_inv_anterior_swabs" name="current_inv_anterior_swabs" class="form-control" value="<%= @warehouse_entry.current_inv_anterior_swabs %>">
-    <!-- Input for current_inv_anterior_swabs end -->
   </div>
-  <!-- Label and input for current_inv_anterior_swabs end -->
 
-  <!-- Label and input for number_nasopharyngeal_swabs_received_24_hour start -->
   <div class="form-group">
     <label for="number_nasopharyngeal_swabs_received_24_hour">
       Number nasopharyngeal swabs received 24 hour
     </label>
 
-    <!-- Input for number_nasopharyngeal_swabs_received_24_hour start -->
     <input type="text" id="number_nasopharyngeal_swabs_received_24_hour" name="number_nasopharyngeal_swabs_received_24_hour" class="form-control" value="<%= @warehouse_entry.number_nasopharyngeal_swabs_received_24_hour %>">
-    <!-- Input for number_nasopharyngeal_swabs_received_24_hour end -->
   </div>
-  <!-- Label and input for number_nasopharyngeal_swabs_received_24_hour end -->
 
-  <!-- Label and input for number_nasopharyngeal_swabs_sent_24_hour start -->
   <div class="form-group">
     <label for="number_nasopharyngeal_swabs_sent_24_hour">
       Number nasopharyngeal swabs sent 24 hour
     </label>
 
-    <!-- Input for number_nasopharyngeal_swabs_sent_24_hour start -->
     <input type="text" id="number_nasopharyngeal_swabs_sent_24_hour" name="number_nasopharyngeal_swabs_sent_24_hour" class="form-control" value="<%= @warehouse_entry.number_nasopharyngeal_swabs_sent_24_hour %>">
-    <!-- Input for number_nasopharyngeal_swabs_sent_24_hour end -->
   </div>
-  <!-- Label and input for number_nasopharyngeal_swabs_sent_24_hour end -->
 
-  <!-- Label and input for number_outstanding_orders_nasopharyngeal_swabs start -->
   <div class="form-group">
     <label for="number_outstanding_orders_nasopharyngeal_swabs">
       Number outstanding orders nasopharyngeal swabs
     </label>
 
-    <!-- Input for number_outstanding_orders_nasopharyngeal_swabs start -->
     <input type="text" id="number_outstanding_orders_nasopharyngeal_swabs" name="number_outstanding_orders_nasopharyngeal_swabs" class="form-control" value="<%= @warehouse_entry.number_outstanding_orders_nasopharyngeal_swabs %>">
-    <!-- Input for number_outstanding_orders_nasopharyngeal_swabs end -->
   </div>
-  <!-- Label and input for number_outstanding_orders_nasopharyngeal_swabs end -->
 
-  <!-- Label and input for current_inv_nasopharyngeal_swabs start -->
   <div class="form-group">
     <label for="current_inv_nasopharyngeal_swabs">
       Current inv nasopharyngeal swabs
     </label>
 
-    <!-- Input for current_inv_nasopharyngeal_swabs start -->
     <input type="text" id="current_inv_nasopharyngeal_swabs" name="current_inv_nasopharyngeal_swabs" class="form-control" value="<%= @warehouse_entry.current_inv_nasopharyngeal_swabs %>">
-    <!-- Input for current_inv_nasopharyngeal_swabs end -->
   </div>
-  <!-- Label and input for current_inv_nasopharyngeal_swabs end -->
 
-  <!-- Label and input for number_transport_media_received_24_hour start -->
   <div class="form-group">
     <label for="number_transport_media_received_24_hour">
       Number transport media received 24 hour
     </label>
 
-    <!-- Input for number_transport_media_received_24_hour start -->
     <input type="text" id="number_transport_media_received_24_hour" name="number_transport_media_received_24_hour" class="form-control" value="<%= @warehouse_entry.number_transport_media_received_24_hour %>">
-    <!-- Input for number_transport_media_received_24_hour end -->
   </div>
-  <!-- Label and input for number_transport_media_received_24_hour end -->
 
-  <!-- Label and input for number_transport_media_sent_24_hour start -->
   <div class="form-group">
     <label for="number_transport_media_sent_24_hour">
       Number transport media sent 24 hour
     </label>
 
-    <!-- Input for number_transport_media_sent_24_hour start -->
     <input type="text" id="number_transport_media_sent_24_hour" name="number_transport_media_sent_24_hour" class="form-control" value="<%= @warehouse_entry.number_transport_media_sent_24_hour %>">
-    <!-- Input for number_transport_media_sent_24_hour end -->
   </div>
-  <!-- Label and input for number_transport_media_sent_24_hour end -->
 
-  <!-- Label and input for number_outstanding_orders_transport_media start -->
   <div class="form-group">
     <label for="number_outstanding_orders_transport_media">
       Number outstanding orders transport media
     </label>
 
-    <!-- Input for number_outstanding_orders_transport_media start -->
     <input type="text" id="number_outstanding_orders_transport_media" name="number_outstanding_orders_transport_media" class="form-control" value="<%= @warehouse_entry.number_outstanding_orders_transport_media %>">
-    <!-- Input for number_outstanding_orders_transport_media end -->
   </div>
-  <!-- Label and input for number_outstanding_orders_transport_media end -->
 
-  <!-- Label and input for current_inv_transport_media start -->
   <div class="form-group">
     <label for="current_inv_transport_media">
       Current inv transport media
     </label>
 
-    <!-- Input for current_inv_transport_media start -->
     <input type="text" id="current_inv_transport_media" name="current_inv_transport_media" class="form-control" value="<%= @warehouse_entry.current_inv_transport_media %>">
-    <!-- Input for current_inv_transport_media end -->
   </div>
-  <!-- Label and input for current_inv_transport_media end -->
 
-  <!-- Label and input for warehouse_id start -->
-  <!-- Input for warehouse_id start -->
   <input type="hidden" name="warehouse_id" value="<%= @warehouse.id %>">
-  <!-- Input for warehouse_id end -->
 
-  <!-- Label and input for for_24h_period_ending_at start -->
   <div class="form-group">
     <label for="for_24h_period_ending_at">
       For 24h period ending at
     </label>
 
-    <!-- Input for for_24h_period_ending_at start -->
     <input type="text" id="for_24h_period_ending_at" name="for_24h_period_ending_at" class="form-control" value="<%= @warehouse_entry.for_24h_period_ending_at %>">
-    <!-- Input for for_24h_period_ending_at end -->
   </div>
-  <!-- Label and input for for_24h_period_ending_at end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create warehouse entry

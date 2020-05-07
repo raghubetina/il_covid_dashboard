@@ -11,58 +11,46 @@
         </a>
       </div>
 
-      <!-- Edit link center_type start -->
       <div class="col">
         <a href="/center_types/<%= @center_type.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit center type
         </a>
       </div>
-      <!-- Edit link center_type end -->
 
-      <!-- Delete link center_type start -->
       <div class="col">
         <a href="/delete_center_type/<%= @center_type.id %>" class="btn btn-block btn-outline-secondary">
           Delete center type
         </a>
       </div>
-      <!-- Delete link center_type end -->
     </div>
 
     <dl>
       <dt>
         Name
       </dt>
-      <!-- Display name start -->
       <dd>
         <%= @center_type.name %>
       </dd>
-      <!-- Display name end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@center_type.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@center_type.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "center_type_templates/center_type_testing_centers" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

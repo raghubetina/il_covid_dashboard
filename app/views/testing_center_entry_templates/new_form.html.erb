@@ -5,141 +5,95 @@
 
 <hr>
 
-<!-- Form testing_center_entry start -->
 <form action="/create_testing_center_entry" method="post">
-<!-- Form testing_center_entry end -->
 
-  <!-- Label and input for testing_center_id start -->
   <div class="form-group">
     <label for="testing_center_id">
       Testing center
     </label>
 
-    <!-- Input for testing_center_id start -->
     <%= select_tag(:testing_center_id, options_from_collection_for_select(TestingCenter.all, :id, :center_type_id, @testing_center_entry.testing_center_id), :class => "form-control") %>
-    <!-- Input for testing_center_id end -->
   </div>
-  <!-- Label and input for testing_center_id end -->
 
-  <!-- Label and input for number_test_administered start -->
   <div class="form-group">
     <label for="number_test_administered">
       Number test administered
     </label>
 
-    <!-- Input for number_test_administered start -->
     <input type="text" id="number_test_administered" name="number_test_administered" class="form-control">
-    <!-- Input for number_test_administered end -->
   </div>
-  <!-- Label and input for number_test_administered end -->
 
-  <!-- Label and input for number_of_people_untested_from_insufficient_supply start -->
   <div class="form-group">
     <label for="number_of_people_untested_from_insufficient_supply">
       Number of people untested from insufficient supply
     </label>
 
-    <!-- Input for number_of_people_untested_from_insufficient_supply start -->
     <input type="text" id="number_of_people_untested_from_insufficient_supply" name="number_of_people_untested_from_insufficient_supply" class="form-control">
-    <!-- Input for number_of_people_untested_from_insufficient_supply end -->
   </div>
-  <!-- Label and input for number_of_people_untested_from_insufficient_supply end -->
 
-  <!-- Label and input for number_of_people_untested_from_other_reasons start -->
   <div class="form-group">
     <label for="number_of_people_untested_from_other_reasons">
       Number of people untested from other reasons
     </label>
 
-    <!-- Input for number_of_people_untested_from_other_reasons start -->
     <input type="text" id="number_of_people_untested_from_other_reasons" name="number_of_people_untested_from_other_reasons" class="form-control">
-    <!-- Input for number_of_people_untested_from_other_reasons end -->
   </div>
-  <!-- Label and input for number_of_people_untested_from_other_reasons end -->
 
-  <!-- Label and input for percent_capacity start -->
   <div class="form-group">
     <label for="percent_capacity">
       Percent capacity
     </label>
 
-    <!-- Input for percent_capacity start -->
     <input type="text" id="percent_capacity" name="percent_capacity" class="form-control">
-    <!-- Input for percent_capacity end -->
   </div>
-  <!-- Label and input for percent_capacity end -->
 
-  <!-- Label and input for percent_positive_24_hour start -->
   <div class="form-group">
     <label for="percent_positive_24_hour">
       Percent positive 24 hour
     </label>
 
-    <!-- Input for percent_positive_24_hour start -->
     <input type="text" id="percent_positive_24_hour" name="percent_positive_24_hour" class="form-control">
-    <!-- Input for percent_positive_24_hour end -->
   </div>
-  <!-- Label and input for percent_positive_24_hour end -->
 
-  <!-- Label and input for percent_positive_72_hour start -->
   <div class="form-group">
     <label for="percent_positive_72_hour">
       Percent positive 72 hour
     </label>
 
-    <!-- Input for percent_positive_72_hour start -->
     <input type="text" id="percent_positive_72_hour" name="percent_positive_72_hour" class="form-control">
-    <!-- Input for percent_positive_72_hour end -->
   </div>
-  <!-- Label and input for percent_positive_72_hour end -->
 
-  <!-- Label and input for current_inv_anterior_nasal_swabs start -->
   <div class="form-group">
     <label for="current_inv_anterior_nasal_swabs">
       Current inv anterior nasal swabs
     </label>
 
-    <!-- Input for current_inv_anterior_nasal_swabs start -->
     <input type="text" id="current_inv_anterior_nasal_swabs" name="current_inv_anterior_nasal_swabs" class="form-control">
-    <!-- Input for current_inv_anterior_nasal_swabs end -->
   </div>
-  <!-- Label and input for current_inv_anterior_nasal_swabs end -->
 
-  <!-- Label and input for current_inv_nasophayngeal_swabs start -->
   <div class="form-group">
     <label for="current_inv_nasophayngeal_swabs">
       Current inv nasophayngeal swabs
     </label>
 
-    <!-- Input for current_inv_nasophayngeal_swabs start -->
     <input type="text" id="current_inv_nasophayngeal_swabs" name="current_inv_nasophayngeal_swabs" class="form-control">
-    <!-- Input for current_inv_nasophayngeal_swabs end -->
   </div>
-  <!-- Label and input for current_inv_nasophayngeal_swabs end -->
 
-  <!-- Label and input for current_inv_transport_media start -->
   <div class="form-group">
     <label for="current_inv_transport_media">
       Current inv transport media
     </label>
 
-    <!-- Input for current_inv_transport_media start -->
     <input type="text" id="current_inv_transport_media" name="current_inv_transport_media" class="form-control">
-    <!-- Input for current_inv_transport_media end -->
   </div>
-  <!-- Label and input for current_inv_transport_media end -->
 
-  <!-- Label and input for for_24h_period_ending_at start -->
   <div class="form-group">
     <label for="for_24h_period_ending_at">
       For 24h period ending at
     </label>
 
-    <!-- Input for for_24h_period_ending_at start -->
     <input type="text" id="for_24h_period_ending_at" name="for_24h_period_ending_at" class="form-control">
-    <!-- Input for for_24h_period_ending_at end -->
   </div>
-  <!-- Label and input for for_24h_period_ending_at end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create testing center entry

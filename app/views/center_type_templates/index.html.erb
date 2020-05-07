@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "center_type_templates/center_types_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -50,29 +46,21 @@
 
       <% @center_types.each do |center_type| %>
       <tr>
-        <!-- Display center_type.id start -->
         <td>
           <%= center_type.id %>
         </td>
-        <!-- Display center_type.id end -->
 
-        <!-- Display center_type.name start -->
         <td>
           <%= center_type.name %>
         </td>
-        <!-- Display center_type.name end -->
 
-        <!-- Display center_type.created_at start -->
         <td>
           <%= time_ago_in_words(center_type.created_at) %> ago
         </td>
-        <!-- Display center_type.created_at end -->
 
-        <!-- Display center_type.updated_at start -->
         <td>
           <%= time_ago_in_words(center_type.updated_at) %> ago
         </td>
-        <!-- Display center_type.updated_at end -->
 
         <td>
           <a href="/center_types/<%= center_type.id %>">

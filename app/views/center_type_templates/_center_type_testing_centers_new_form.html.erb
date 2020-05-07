@@ -1,35 +1,22 @@
-<!-- Form testing_center start -->
 <form action="/create_testing_center_from_center_type" method="post">
-<!-- Form testing_center end -->
 
-  <!-- Label and input for center_type_id start -->
-  <!-- Input for center_type_id start -->
   <input type="hidden" name="center_type_id" value="<%= @center_type.id %>">
-  <!-- Input for center_type_id end -->
 
-  <!-- Label and input for location_name start -->
   <div class="form-group">
     <label for="location_name">
       Location name
     </label>
 
-    <!-- Input for location_name start -->
     <input type="text" id="location_name" name="location_name" class="form-control" value="<%= @testing_center.location_name %>">
-    <!-- Input for location_name end -->
   </div>
-  <!-- Label and input for location_name end -->
 
-  <!-- Label and input for location start -->
   <div class="form-group">
     <label for="location">
       Location
     </label>
 
-    <!-- Input for location start -->
     <input type="text" id="location" name="location" class="form-control" value="<%= @testing_center.location %>">
-    <!-- Input for location end -->
   </div>
-  <!-- Label and input for location end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create testing center

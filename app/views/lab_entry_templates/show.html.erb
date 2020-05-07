@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link lab_entry start -->
       <div class="col">
         <a href="/lab_entries/<%= @lab_entry.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit lab entry
         </a>
       </div>
-      <!-- Edit link lab_entry end -->
 
-      <!-- Delete link lab_entry start -->
       <div class="col">
         <a href="/delete_lab_entry/<%= @lab_entry.id %>" class="btn btn-block btn-outline-secondary">
           Delete lab entry
         </a>
       </div>
-      <!-- Delete link lab_entry end -->
     </div>
 
     <dl>
       <dt>
         Lab
       </dt>
-      <!-- Display lab_id start -->
       <dd>
         <% if @lab_entry.lab.present? %>
           <a href="/labs/<%= @lab_entry.lab_id %>">
@@ -40,100 +35,77 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display lab_id end -->
 
       <dt>
         Number tests arrived 24 hour
       </dt>
-      <!-- Display number_tests_arrived_24_hour start -->
       <dd>
         <%= @lab_entry.number_tests_arrived_24_hour %>
       </dd>
-      <!-- Display number_tests_arrived_24_hour end -->
 
       <dt>
         Number tested 24 hour
       </dt>
-      <!-- Display number_tested_24_hour start -->
       <dd>
         <%= @lab_entry.number_tested_24_hour %>
       </dd>
-      <!-- Display number_tested_24_hour end -->
 
       <dt>
         Positive rate 24 hour
       </dt>
-      <!-- Display positive_rate_24_hour start -->
       <dd>
         <%= @lab_entry.positive_rate_24_hour %>
       </dd>
-      <!-- Display positive_rate_24_hour end -->
 
       <dt>
         Percent capacity achieved 24 hour
       </dt>
-      <!-- Display percent_capacity_achieved_24_hour start -->
       <dd>
         <%= @lab_entry.percent_capacity_achieved_24_hour %>
       </dd>
-      <!-- Display percent_capacity_achieved_24_hour end -->
 
       <dt>
         Average hours needed to process tests 24 hour
       </dt>
-      <!-- Display average_hours_needed_to_process_tests_24_hour start -->
       <dd>
         <%= @lab_entry.average_hours_needed_to_process_tests_24_hour %>
       </dd>
-      <!-- Display average_hours_needed_to_process_tests_24_hour end -->
 
       <dt>
         Percent of tests in last 7 days which took longer than 24 hours
       </dt>
-      <!-- Display percent_of_tests_in_last_7_days_which_took_longer_than_24_hours start -->
       <dd>
         <%= @lab_entry.percent_of_tests_in_last_7_days_which_took_longer_than_24_hours %>
       </dd>
-      <!-- Display percent_of_tests_in_last_7_days_which_took_longer_than_24_hours end -->
 
       <dt>
         Total number tests at lab which require processing
       </dt>
-      <!-- Display total_number_tests_at_lab_which_require_processing start -->
       <dd>
         <%= @lab_entry.total_number_tests_at_lab_which_require_processing %>
       </dd>
-      <!-- Display total_number_tests_at_lab_which_require_processing end -->
 
       <dt>
         For 24h period ending at
       </dt>
-      <!-- Display for_24h_period_ending_at start -->
       <dd>
         <%= @lab_entry.for_24h_period_ending_at %>
       </dd>
-      <!-- Display for_24h_period_ending_at end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@lab_entry.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@lab_entry.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

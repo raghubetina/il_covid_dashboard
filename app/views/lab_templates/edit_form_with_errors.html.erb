@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @lab.errors.any? %>
   <% @lab.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,33 +12,23 @@
 
 <hr>
 
-<!-- Form lab start -->
 <form action="/update_lab/<%= @lab.id %>" method="post">
-<!-- Form lab end -->
 
-  <!-- Label and input for location_name start -->
   <div class="form-group">
     <label for="location_name">
       Location name
     </label>
 
-    <!-- Input for location_name start -->
     <input type="text" id="location_name" name="location_name" class="form-control" value="<%= @lab.location_name %>">
-    <!-- Input for location_name end -->
   </div>
-  <!-- Label and input for location_name end -->
 
-  <!-- Label and input for location start -->
   <div class="form-group">
     <label for="location">
       Location
     </label>
 
-    <!-- Input for location start -->
     <input type="text" id="location" name="location" class="form-control" value="<%= @lab.location %>">
-    <!-- Input for location end -->
   </div>
-  <!-- Label and input for location end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update lab

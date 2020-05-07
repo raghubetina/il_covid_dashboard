@@ -11,136 +11,107 @@
         </a>
       </div>
 
-      <!-- Edit link warehouse_entry start -->
       <div class="col">
         <a href="/warehouse_entries/<%= @warehouse_entry.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit warehouse entry
         </a>
       </div>
-      <!-- Edit link warehouse_entry end -->
 
-      <!-- Delete link warehouse_entry start -->
       <div class="col">
         <a href="/delete_warehouse_entry/<%= @warehouse_entry.id %>" class="btn btn-block btn-outline-secondary">
           Delete warehouse entry
         </a>
       </div>
-      <!-- Delete link warehouse_entry end -->
     </div>
 
     <dl>
       <dt>
         Number anterior swabs received 24 hour
       </dt>
-      <!-- Display number_anterior_swabs_received_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_anterior_swabs_received_24_hour %>
       </dd>
-      <!-- Display number_anterior_swabs_received_24_hour end -->
 
       <dt>
         Number anterior swabs sent 24 hour
       </dt>
-      <!-- Display number_anterior_swabs_sent_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_anterior_swabs_sent_24_hour %>
       </dd>
-      <!-- Display number_anterior_swabs_sent_24_hour end -->
 
       <dt>
         Number outstanding orders anterior swabs
       </dt>
-      <!-- Display number_outstanding_orders_anterior_swabs start -->
       <dd>
         <%= @warehouse_entry.number_outstanding_orders_anterior_swabs %>
       </dd>
-      <!-- Display number_outstanding_orders_anterior_swabs end -->
 
       <dt>
         Current inv anterior swabs
       </dt>
-      <!-- Display current_inv_anterior_swabs start -->
       <dd>
         <%= @warehouse_entry.current_inv_anterior_swabs %>
       </dd>
-      <!-- Display current_inv_anterior_swabs end -->
 
       <dt>
         Number nasopharyngeal swabs received 24 hour
       </dt>
-      <!-- Display number_nasopharyngeal_swabs_received_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_nasopharyngeal_swabs_received_24_hour %>
       </dd>
-      <!-- Display number_nasopharyngeal_swabs_received_24_hour end -->
 
       <dt>
         Number nasopharyngeal swabs sent 24 hour
       </dt>
-      <!-- Display number_nasopharyngeal_swabs_sent_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_nasopharyngeal_swabs_sent_24_hour %>
       </dd>
-      <!-- Display number_nasopharyngeal_swabs_sent_24_hour end -->
 
       <dt>
         Number outstanding orders nasopharyngeal swabs
       </dt>
-      <!-- Display number_outstanding_orders_nasopharyngeal_swabs start -->
       <dd>
         <%= @warehouse_entry.number_outstanding_orders_nasopharyngeal_swabs %>
       </dd>
-      <!-- Display number_outstanding_orders_nasopharyngeal_swabs end -->
 
       <dt>
         Current inv nasopharyngeal swabs
       </dt>
-      <!-- Display current_inv_nasopharyngeal_swabs start -->
       <dd>
         <%= @warehouse_entry.current_inv_nasopharyngeal_swabs %>
       </dd>
-      <!-- Display current_inv_nasopharyngeal_swabs end -->
 
       <dt>
         Number transport media received 24 hour
       </dt>
-      <!-- Display number_transport_media_received_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_transport_media_received_24_hour %>
       </dd>
-      <!-- Display number_transport_media_received_24_hour end -->
 
       <dt>
         Number transport media sent 24 hour
       </dt>
-      <!-- Display number_transport_media_sent_24_hour start -->
       <dd>
         <%= @warehouse_entry.number_transport_media_sent_24_hour %>
       </dd>
-      <!-- Display number_transport_media_sent_24_hour end -->
 
       <dt>
         Number outstanding orders transport media
       </dt>
-      <!-- Display number_outstanding_orders_transport_media start -->
       <dd>
         <%= @warehouse_entry.number_outstanding_orders_transport_media %>
       </dd>
-      <!-- Display number_outstanding_orders_transport_media end -->
 
       <dt>
         Current inv transport media
       </dt>
-      <!-- Display current_inv_transport_media start -->
       <dd>
         <%= @warehouse_entry.current_inv_transport_media %>
       </dd>
-      <!-- Display current_inv_transport_media end -->
 
       <dt>
         Warehouse
       </dt>
-      <!-- Display warehouse_id start -->
       <dd>
         <% if @warehouse_entry.warehouse.present? %>
           <a href="/warehouses/<%= @warehouse_entry.warehouse_id %>">
@@ -148,37 +119,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display warehouse_id end -->
 
       <dt>
         For 24h period ending at
       </dt>
-      <!-- Display for_24h_period_ending_at start -->
       <dd>
         <%= @warehouse_entry.for_24h_period_ending_at %>
       </dd>
-      <!-- Display for_24h_period_ending_at end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@warehouse_entry.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@warehouse_entry.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

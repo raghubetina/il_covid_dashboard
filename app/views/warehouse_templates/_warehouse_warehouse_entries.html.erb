@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @warehouse.warehouse_entries.each do |warehouse_entry| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/warehouse_entries/<%= warehouse_entry.id %>">
           <%= warehouse_entry.number_outstanding_orders_transport_media %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_warehouse_entry_from_warehouse/<%= warehouse_entry.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="warehouse_warehouse_entries_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "warehouse_templates/warehouse_warehouse_entries_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

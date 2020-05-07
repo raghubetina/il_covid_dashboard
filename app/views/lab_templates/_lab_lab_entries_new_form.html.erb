@@ -1,107 +1,70 @@
-<!-- Form lab_entry start -->
 <form action="/create_lab_entry_from_lab" method="post">
-<!-- Form lab_entry end -->
 
-  <!-- Label and input for lab_id start -->
-  <!-- Input for lab_id start -->
   <input type="hidden" name="lab_id" value="<%= @lab.id %>">
-  <!-- Input for lab_id end -->
 
-  <!-- Label and input for number_tests_arrived_24_hour start -->
   <div class="form-group">
     <label for="number_tests_arrived_24_hour">
       Number tests arrived 24 hour
     </label>
 
-    <!-- Input for number_tests_arrived_24_hour start -->
     <input type="text" id="number_tests_arrived_24_hour" name="number_tests_arrived_24_hour" class="form-control" value="<%= @lab_entry.number_tests_arrived_24_hour %>">
-    <!-- Input for number_tests_arrived_24_hour end -->
   </div>
-  <!-- Label and input for number_tests_arrived_24_hour end -->
 
-  <!-- Label and input for number_tested_24_hour start -->
   <div class="form-group">
     <label for="number_tested_24_hour">
       Number tested 24 hour
     </label>
 
-    <!-- Input for number_tested_24_hour start -->
     <input type="text" id="number_tested_24_hour" name="number_tested_24_hour" class="form-control" value="<%= @lab_entry.number_tested_24_hour %>">
-    <!-- Input for number_tested_24_hour end -->
   </div>
-  <!-- Label and input for number_tested_24_hour end -->
 
-  <!-- Label and input for positive_rate_24_hour start -->
   <div class="form-group">
     <label for="positive_rate_24_hour">
       Positive rate 24 hour
     </label>
 
-    <!-- Input for positive_rate_24_hour start -->
     <input type="text" id="positive_rate_24_hour" name="positive_rate_24_hour" class="form-control" value="<%= @lab_entry.positive_rate_24_hour %>">
-    <!-- Input for positive_rate_24_hour end -->
   </div>
-  <!-- Label and input for positive_rate_24_hour end -->
 
-  <!-- Label and input for percent_capacity_achieved_24_hour start -->
   <div class="form-group">
     <label for="percent_capacity_achieved_24_hour">
       Percent capacity achieved 24 hour
     </label>
 
-    <!-- Input for percent_capacity_achieved_24_hour start -->
     <input type="text" id="percent_capacity_achieved_24_hour" name="percent_capacity_achieved_24_hour" class="form-control" value="<%= @lab_entry.percent_capacity_achieved_24_hour %>">
-    <!-- Input for percent_capacity_achieved_24_hour end -->
   </div>
-  <!-- Label and input for percent_capacity_achieved_24_hour end -->
 
-  <!-- Label and input for average_hours_needed_to_process_tests_24_hour start -->
   <div class="form-group">
     <label for="average_hours_needed_to_process_tests_24_hour">
       Average hours needed to process tests 24 hour
     </label>
 
-    <!-- Input for average_hours_needed_to_process_tests_24_hour start -->
     <input type="text" id="average_hours_needed_to_process_tests_24_hour" name="average_hours_needed_to_process_tests_24_hour" class="form-control" value="<%= @lab_entry.average_hours_needed_to_process_tests_24_hour %>">
-    <!-- Input for average_hours_needed_to_process_tests_24_hour end -->
   </div>
-  <!-- Label and input for average_hours_needed_to_process_tests_24_hour end -->
 
-  <!-- Label and input for percent_of_tests_in_last_7_days_which_took_longer_than_24_hours start -->
   <div class="form-group">
     <label for="percent_of_tests_in_last_7_days_which_took_longer_than_24_hours">
       Percent of tests in last 7 days which took longer than 24 hours
     </label>
 
-    <!-- Input for percent_of_tests_in_last_7_days_which_took_longer_than_24_hours start -->
     <input type="text" id="percent_of_tests_in_last_7_days_which_took_longer_than_24_hours" name="percent_of_tests_in_last_7_days_which_took_longer_than_24_hours" class="form-control" value="<%= @lab_entry.percent_of_tests_in_last_7_days_which_took_longer_than_24_hours %>">
-    <!-- Input for percent_of_tests_in_last_7_days_which_took_longer_than_24_hours end -->
   </div>
-  <!-- Label and input for percent_of_tests_in_last_7_days_which_took_longer_than_24_hours end -->
 
-  <!-- Label and input for total_number_tests_at_lab_which_require_processing start -->
   <div class="form-group">
     <label for="total_number_tests_at_lab_which_require_processing">
       Total number tests at lab which require processing
     </label>
 
-    <!-- Input for total_number_tests_at_lab_which_require_processing start -->
     <input type="text" id="total_number_tests_at_lab_which_require_processing" name="total_number_tests_at_lab_which_require_processing" class="form-control" value="<%= @lab_entry.total_number_tests_at_lab_which_require_processing %>">
-    <!-- Input for total_number_tests_at_lab_which_require_processing end -->
   </div>
-  <!-- Label and input for total_number_tests_at_lab_which_require_processing end -->
 
-  <!-- Label and input for for_24h_period_ending_at start -->
   <div class="form-group">
     <label for="for_24h_period_ending_at">
       For 24h period ending at
     </label>
 
-    <!-- Input for for_24h_period_ending_at start -->
     <input type="text" id="for_24h_period_ending_at" name="for_24h_period_ending_at" class="form-control" value="<%= @lab_entry.for_24h_period_ending_at %>">
-    <!-- Input for for_24h_period_ending_at end -->
   </div>
-  <!-- Label and input for for_24h_period_ending_at end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create lab entry

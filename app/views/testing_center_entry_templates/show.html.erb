@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link testing_center_entry start -->
       <div class="col">
         <a href="/testing_center_entries/<%= @testing_center_entry.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit testing center entry
         </a>
       </div>
-      <!-- Edit link testing_center_entry end -->
 
-      <!-- Delete link testing_center_entry start -->
       <div class="col">
         <a href="/delete_testing_center_entry/<%= @testing_center_entry.id %>" class="btn btn-block btn-outline-secondary">
           Delete testing center entry
         </a>
       </div>
-      <!-- Delete link testing_center_entry end -->
     </div>
 
     <dl>
       <dt>
         Testing center
       </dt>
-      <!-- Display testing_center_id start -->
       <dd>
         <% if @testing_center_entry.testing_center.present? %>
           <a href="/testing_centers/<%= @testing_center_entry.testing_center_id %>">
@@ -40,118 +35,91 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display testing_center_id end -->
 
       <dt>
         Number test administered
       </dt>
-      <!-- Display number_test_administered start -->
       <dd>
         <%= @testing_center_entry.number_test_administered %>
       </dd>
-      <!-- Display number_test_administered end -->
 
       <dt>
         Number of people untested from insufficient supply
       </dt>
-      <!-- Display number_of_people_untested_from_insufficient_supply start -->
       <dd>
         <%= @testing_center_entry.number_of_people_untested_from_insufficient_supply %>
       </dd>
-      <!-- Display number_of_people_untested_from_insufficient_supply end -->
 
       <dt>
         Number of people untested from other reasons
       </dt>
-      <!-- Display number_of_people_untested_from_other_reasons start -->
       <dd>
         <%= @testing_center_entry.number_of_people_untested_from_other_reasons %>
       </dd>
-      <!-- Display number_of_people_untested_from_other_reasons end -->
 
       <dt>
         Percent capacity
       </dt>
-      <!-- Display percent_capacity start -->
       <dd>
         <%= @testing_center_entry.percent_capacity %>
       </dd>
-      <!-- Display percent_capacity end -->
 
       <dt>
         Percent positive 24 hour
       </dt>
-      <!-- Display percent_positive_24_hour start -->
       <dd>
         <%= @testing_center_entry.percent_positive_24_hour %>
       </dd>
-      <!-- Display percent_positive_24_hour end -->
 
       <dt>
         Percent positive 72 hour
       </dt>
-      <!-- Display percent_positive_72_hour start -->
       <dd>
         <%= @testing_center_entry.percent_positive_72_hour %>
       </dd>
-      <!-- Display percent_positive_72_hour end -->
 
       <dt>
         Current inv anterior nasal swabs
       </dt>
-      <!-- Display current_inv_anterior_nasal_swabs start -->
       <dd>
         <%= @testing_center_entry.current_inv_anterior_nasal_swabs %>
       </dd>
-      <!-- Display current_inv_anterior_nasal_swabs end -->
 
       <dt>
         Current inv nasophayngeal swabs
       </dt>
-      <!-- Display current_inv_nasophayngeal_swabs start -->
       <dd>
         <%= @testing_center_entry.current_inv_nasophayngeal_swabs %>
       </dd>
-      <!-- Display current_inv_nasophayngeal_swabs end -->
 
       <dt>
         Current inv transport media
       </dt>
-      <!-- Display current_inv_transport_media start -->
       <dd>
         <%= @testing_center_entry.current_inv_transport_media %>
       </dd>
-      <!-- Display current_inv_transport_media end -->
 
       <dt>
         For 24h period ending at
       </dt>
-      <!-- Display for_24h_period_ending_at start -->
       <dd>
         <%= @testing_center_entry.for_24h_period_ending_at %>
       </dd>
-      <!-- Display for_24h_period_ending_at end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@testing_center_entry.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@testing_center_entry.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
