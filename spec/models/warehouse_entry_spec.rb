@@ -4,6 +4,8 @@ RSpec.describe WarehouseEntry, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:warehouse) }
+
     end
 
     describe "InDirect Associations" do
