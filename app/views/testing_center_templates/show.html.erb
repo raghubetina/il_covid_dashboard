@@ -34,7 +34,11 @@
       </dt>
       <!-- Display center_type_id start -->
       <dd>
-        <%= @testing_center.center_type_id %>
+        <% if @testing_center.center_type.present? %>
+          <a href="/center_types/<%= @testing_center.center_type_id %>">
+            <%= @testing_center.center_type.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display center_type_id end -->
 

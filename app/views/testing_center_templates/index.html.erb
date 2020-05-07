@@ -62,7 +62,11 @@
 
         <!-- Display testing_center.center_type_id start -->
         <td>
-          <%= testing_center.center_type.name %>
+          <% if testing_center.center_type.present? %>
+            <a href="/center_types/<%= testing_center.center_type.id %>">
+              <%= testing_center.center_type.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display testing_center.center_type_id end -->
 

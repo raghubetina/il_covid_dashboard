@@ -34,7 +34,11 @@
       </dt>
       <!-- Display lab_id start -->
       <dd>
-        <%= @lab_entry.lab_id %>
+        <% if @lab_entry.lab.present? %>
+          <a href="/labs/<%= @lab_entry.lab_id %>">
+            <%= @lab_entry.lab.location_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display lab_id end -->
 

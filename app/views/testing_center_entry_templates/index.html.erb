@@ -94,7 +94,11 @@
 
         <!-- Display testing_center_entry.testing_center_id start -->
         <td>
-          <%= testing_center_entry.testing_center.center_type_id %>
+          <% if testing_center_entry.testing_center.present? %>
+            <a href="/testing_centers/<%= testing_center_entry.testing_center.id %>">
+              <%= testing_center_entry.testing_center.center_type_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display testing_center_entry.testing_center_id end -->
 

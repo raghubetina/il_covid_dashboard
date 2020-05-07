@@ -142,7 +142,11 @@
       </dt>
       <!-- Display warehouse_id start -->
       <dd>
-        <%= @warehouse_entry.warehouse_id %>
+        <% if @warehouse_entry.warehouse.present? %>
+          <a href="/warehouses/<%= @warehouse_entry.warehouse_id %>">
+            <%= @warehouse_entry.warehouse.location_name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display warehouse_id end -->
 

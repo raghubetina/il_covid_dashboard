@@ -86,7 +86,11 @@
 
         <!-- Display lab_entry.lab_id start -->
         <td>
-          <%= lab_entry.lab.location_name %>
+          <% if lab_entry.lab.present? %>
+            <a href="/labs/<%= lab_entry.lab.id %>">
+              <%= lab_entry.lab.location_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display lab_entry.lab_id end -->
 

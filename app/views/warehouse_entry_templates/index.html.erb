@@ -178,7 +178,11 @@
 
         <!-- Display warehouse_entry.warehouse_id start -->
         <td>
-          <%= warehouse_entry.warehouse.location_name %>
+          <% if warehouse_entry.warehouse.present? %>
+            <a href="/warehouses/<%= warehouse_entry.warehouse.id %>">
+              <%= warehouse_entry.warehouse.location_name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display warehouse_entry.warehouse_id end -->
 
