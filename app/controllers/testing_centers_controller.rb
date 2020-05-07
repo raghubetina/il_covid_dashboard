@@ -1,6 +1,6 @@
 class TestingCentersController < ApplicationController
   def index
-    @testing_centers = TestingCenter.all
+    @testing_centers = TestingCenter.page(params[:page]).per(10)
 
     render("testing_center_templates/index.html.erb")
   end

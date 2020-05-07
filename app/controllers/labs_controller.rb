@@ -1,6 +1,6 @@
 class LabsController < ApplicationController
   def index
-    @labs = Lab.all
+    @labs = Lab.page(params[:page]).per(10)
 
     render("lab_templates/index.html.erb")
   end

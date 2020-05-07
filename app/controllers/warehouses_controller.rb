@@ -1,6 +1,6 @@
 class WarehousesController < ApplicationController
   def index
-    @warehouses = Warehouse.all
+    @warehouses = Warehouse.page(params[:page]).per(10)
 
     render("warehouse_templates/index.html.erb")
   end

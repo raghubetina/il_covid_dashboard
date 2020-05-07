@@ -1,6 +1,6 @@
 class CenterTypesController < ApplicationController
   def index
-    @center_types = CenterType.all
+    @center_types = CenterType.page(params[:page]).per(10)
 
     render("center_type_templates/index.html.erb")
   end
