@@ -1,0 +1,92 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All labs
+    </h1>
+
+    <a href="/labs/new" class="btn btn-block btn-outline-secondary">
+      Add a new lab
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Location name
+        </th>
+
+        <th>
+          Location
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @labs.each do |lab| %>
+      <tr>
+        <!-- Display lab.id start -->
+        <td>
+          <%= lab.id %>
+        </td>
+        <!-- Display lab.id end -->
+
+        <!-- Display lab.location_name start -->
+        <td>
+          <%= lab.location_name %>
+        </td>
+        <!-- Display lab.location_name end -->
+
+        <!-- Display lab.location start -->
+        <td>
+          <%= lab.location %>
+        </td>
+        <!-- Display lab.location end -->
+
+        <!-- Display lab.created_at start -->
+        <td>
+          <%= time_ago_in_words(lab.created_at) %> ago
+        </td>
+        <!-- Display lab.created_at end -->
+
+        <!-- Display lab.updated_at start -->
+        <td>
+          <%= time_ago_in_words(lab.updated_at) %> ago
+        </td>
+        <!-- Display lab.updated_at end -->
+
+        <td>
+          <a href="/labs/<%= lab.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

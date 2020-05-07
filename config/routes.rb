@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Lab resource:
+
+  # CREATE
+  get("/labs/new", { :controller => "labs", :action => "new_form" })
+  post("/create_lab", { :controller => "labs", :action => "create_row" })
+
+  # READ
+  get("/labs", { :controller => "labs", :action => "index" })
+  get("/labs/:id_to_display", { :controller => "labs", :action => "show" })
+
+  # UPDATE
+  get("/labs/:prefill_with_id/edit", { :controller => "labs", :action => "edit_form" })
+  post("/update_lab/:id_to_modify", { :controller => "labs", :action => "update_row" })
+
+  # DELETE
+  get("/delete_lab/:id_to_remove", { :controller => "labs", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Testing center resource:
 
   # CREATE

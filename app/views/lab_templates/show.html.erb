@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Lab #<%= @lab.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/labs" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link lab start -->
+      <div class="col">
+        <a href="/labs/<%= @lab.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit lab
+        </a>
+      </div>
+      <!-- Edit link lab end -->
+
+      <!-- Delete link lab start -->
+      <div class="col">
+        <a href="/delete_lab/<%= @lab.id %>" class="btn btn-block btn-outline-secondary">
+          Delete lab
+        </a>
+      </div>
+      <!-- Delete link lab end -->
+    </div>
+
+    <dl>
+      <dt>
+        Location name
+      </dt>
+      <!-- Display location_name start -->
+      <dd>
+        <%= @lab.location_name %>
+      </dd>
+      <!-- Display location_name end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location start -->
+      <dd>
+        <%= @lab.location %>
+      </dd>
+      <!-- Display location end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@lab.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@lab.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

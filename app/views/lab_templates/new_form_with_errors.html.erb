@@ -1,0 +1,56 @@
+<!-- Validation failure messages -->
+<% if @lab.present? %>
+  <% if @lab.errors.any? %>
+    <% @lab.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger">
+        <%= message %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h1>
+  Add a new lab
+</h1>
+
+
+<hr>
+
+<!-- Form lab start -->
+<form action="/create_lab" method="post">
+<!-- Form lab end -->
+
+  <!-- Label and input for location_name start -->
+  <div class="form-group">
+    <label for="location_name">
+      Location name
+    </label>
+
+    <!-- Input for location_name start -->
+    <input type="text" id="location_name" name="location_name" class="form-control" value="<%= @lab.location_name %>">
+    <!-- Input for location_name end -->
+  </div>
+  <!-- Label and input for location_name end -->
+
+  <!-- Label and input for location start -->
+  <div class="form-group">
+    <label for="location">
+      Location
+    </label>
+
+    <!-- Input for location start -->
+    <input type="text" id="location" name="location" class="form-control" value="<%= @lab.location %>">
+    <!-- Input for location end -->
+  </div>
+  <!-- Label and input for location end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create lab
+  </button>
+</form>
+
+<hr>
+
+<a href="/labs">
+  Go back
+</a>
