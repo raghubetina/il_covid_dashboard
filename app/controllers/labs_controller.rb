@@ -6,6 +6,7 @@ class LabsController < ApplicationController
   end
 
   def show
+    @lab_entry = LabEntry.new
     @lab = Lab.find(params.fetch("id_to_display"))
 
     render("lab_templates/show.html.erb")

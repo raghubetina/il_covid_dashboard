@@ -6,6 +6,7 @@ class CenterTypesController < ApplicationController
   end
 
   def show
+    @testing_center = TestingCenter.new
     @center_type = CenterType.find(params.fetch("id_to_display"))
 
     render("center_type_templates/show.html.erb")

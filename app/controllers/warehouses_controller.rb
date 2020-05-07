@@ -6,6 +6,7 @@ class WarehousesController < ApplicationController
   end
 
   def show
+    @warehouse_entry = WarehouseEntry.new
     @warehouse = Warehouse.find(params.fetch("id_to_display"))
 
     render("warehouse_templates/show.html.erb")

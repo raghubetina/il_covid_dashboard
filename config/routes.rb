@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/lab_entries/new", { :controller => "lab_entries", :action => "new_form" })
   post("/create_lab_entry", { :controller => "lab_entries", :action => "create_row" })
+  post("/create_lab_entry_from_lab", { :controller => "lab_entries", :action => "create_row_from_lab" })
 
   # READ
   get("/lab_entries", { :controller => "lab_entries", :action => "index" })
@@ -26,6 +27,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/testing_center_entries/new", { :controller => "testing_center_entries", :action => "new_form" })
   post("/create_testing_center_entry", { :controller => "testing_center_entries", :action => "create_row" })
+  post("/create_testing_center_entry_from_testing_center", { :controller => "testing_center_entries", :action => "create_row_from_testing_center" })
 
   # READ
   get("/testing_center_entries", { :controller => "testing_center_entries", :action => "index" })
@@ -65,6 +67,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/warehouse_entries/new", { :controller => "warehouse_entries", :action => "new_form" })
   post("/create_warehouse_entry", { :controller => "warehouse_entries", :action => "create_row" })
+  post("/create_warehouse_entry_from_warehouse", { :controller => "warehouse_entries", :action => "create_row_from_warehouse" })
 
   # READ
   get("/warehouse_entries", { :controller => "warehouse_entries", :action => "index" })
@@ -104,6 +107,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/testing_centers/new", { :controller => "testing_centers", :action => "new_form" })
   post("/create_testing_center", { :controller => "testing_centers", :action => "create_row" })
+  post("/create_testing_center_from_center_type", { :controller => "testing_centers", :action => "create_row_from_center_type" })
 
   # READ
   get("/testing_centers", { :controller => "testing_centers", :action => "index" })
