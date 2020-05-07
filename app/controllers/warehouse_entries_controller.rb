@@ -77,6 +77,14 @@ class WarehouseEntriesController < ApplicationController
     end
   end
 
+  def destroy_row_from_warehouse
+    @warehouse_entry = WarehouseEntry.find(params.fetch("id_to_remove"))
+
+    @warehouse_entry.destroy
+
+    redirect_to("/warehouses/#{@warehouse_entry.warehouse_id}", notice: "WarehouseEntry deleted successfully.")
+  end
+
   def destroy_row
     @warehouse_entry = WarehouseEntry.find(params.fetch("id_to_remove"))
 

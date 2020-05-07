@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Testing Center Entries
+
+    <a data-toggle="collapse" href="#testing_center_testing_center_entries_new_form">
+      Add testing center entry
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @testing_center.testing_center_entries.each do |testing_center_entry| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/testing_center_entries/<%= testing_center_entry.id %>">
+          <%= testing_center_entry.testing_center_id %>
+        </a>
+        <!-- Show link end -->
+
+        <!-- Delete link start -->
+        <a href="/delete_testing_center_entry_from_testing_center/<%= testing_center_entry.id %>">
+          Delete
+        </a>
+        <!-- Delete link end -->
+
+      </li>
+    <% end %>
+
+    <div class="card-footer">
+      <div class="collapse" id="testing_center_testing_center_entries_new_form">
+        <!-- New associationcollection form start -->
+
+        <!-- New associationcollection form end -->
+      </div>
+    </div>
+
+  </ul>
+</div>

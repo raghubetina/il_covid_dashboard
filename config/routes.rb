@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_lab_entry/:id_to_remove", { :controller => "lab_entries", :action => "destroy_row" })
+  get("/delete_lab_entry_from_lab/:id_to_remove", { :controller => "lab_entries", :action => "destroy_row_from_lab" })
 
   #------------------------------
 
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_testing_center_entry/:id_to_remove", { :controller => "testing_center_entries", :action => "destroy_row" })
+  get("/delete_testing_center_entry_from_testing_center/:id_to_remove", { :controller => "testing_center_entries", :action => "destroy_row_from_testing_center" })
 
   #------------------------------
 
@@ -74,6 +76,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_warehouse_entry/:id_to_remove", { :controller => "warehouse_entries", :action => "destroy_row" })
+  get("/delete_warehouse_entry_from_warehouse/:id_to_remove", { :controller => "warehouse_entries", :action => "destroy_row_from_warehouse" })
 
   #------------------------------
 
@@ -112,6 +115,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_testing_center/:id_to_remove", { :controller => "testing_centers", :action => "destroy_row" })
+  get("/delete_testing_center_from_center_type/:id_to_remove", { :controller => "testing_centers", :action => "destroy_row_from_center_type" })
 
   #------------------------------
 

@@ -55,6 +55,14 @@ class TestingCentersController < ApplicationController
     end
   end
 
+  def destroy_row_from_center_type
+    @testing_center = TestingCenter.find(params.fetch("id_to_remove"))
+
+    @testing_center.destroy
+
+    redirect_to("/center_types/#{@testing_center.center_type_id}", notice: "TestingCenter deleted successfully.")
+  end
+
   def destroy_row
     @testing_center = TestingCenter.find(params.fetch("id_to_remove"))
 

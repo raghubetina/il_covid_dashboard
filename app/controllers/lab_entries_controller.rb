@@ -67,6 +67,14 @@ class LabEntriesController < ApplicationController
     end
   end
 
+  def destroy_row_from_lab
+    @lab_entry = LabEntry.find(params.fetch("id_to_remove"))
+
+    @lab_entry.destroy
+
+    redirect_to("/labs/#{@lab_entry.lab_id}", notice: "LabEntry deleted successfully.")
+  end
+
   def destroy_row
     @lab_entry = LabEntry.find(params.fetch("id_to_remove"))
 

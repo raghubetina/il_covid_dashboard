@@ -71,6 +71,14 @@ class TestingCenterEntriesController < ApplicationController
     end
   end
 
+  def destroy_row_from_testing_center
+    @testing_center_entry = TestingCenterEntry.find(params.fetch("id_to_remove"))
+
+    @testing_center_entry.destroy
+
+    redirect_to("/testing_centers/#{@testing_center_entry.testing_center_id}", notice: "TestingCenterEntry deleted successfully.")
+  end
+
   def destroy_row
     @testing_center_entry = TestingCenterEntry.find(params.fetch("id_to_remove"))
 
