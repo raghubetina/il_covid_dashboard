@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Warehouse entry resource:
+
+  # CREATE
+  get("/warehouse_entries/new", { :controller => "warehouse_entries", :action => "new_form" })
+  post("/create_warehouse_entry", { :controller => "warehouse_entries", :action => "create_row" })
+
+  # READ
+  get("/warehouse_entries", { :controller => "warehouse_entries", :action => "index" })
+  get("/warehouse_entries/:id_to_display", { :controller => "warehouse_entries", :action => "show" })
+
+  # UPDATE
+  get("/warehouse_entries/:prefill_with_id/edit", { :controller => "warehouse_entries", :action => "edit_form" })
+  post("/update_warehouse_entry/:id_to_modify", { :controller => "warehouse_entries", :action => "update_row" })
+
+  # DELETE
+  get("/delete_warehouse_entry/:id_to_remove", { :controller => "warehouse_entries", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Lab resource:
 
   # CREATE
