@@ -4,6 +4,8 @@ RSpec.describe CenterType, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:testing_centers) }
+
     end
 
     describe "InDirect Associations" do
