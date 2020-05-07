@@ -27,7 +27,7 @@
     </label>
 
     <!-- Input for center_type_id start -->
-    <input type="text" id="center_type_id" name="center_type_id" class="form-control" value="<%= @testing_center.center_type_id %>">
+    <%= select_tag(:center_type_id, options_from_collection_for_select(CenterType.all, :id, :name, @testing_center.center_type_id), :class => "form-control") %>
     <!-- Input for center_type_id end -->
   </div>
   <!-- Label and input for center_type_id end -->
