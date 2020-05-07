@@ -1,0 +1,102 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All testing centers
+    </h1>
+
+    <a href="/testing_centers/new" class="btn btn-block btn-outline-secondary">
+      Add a new testing center
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Center type
+        </th>
+
+        <th>
+          Location name
+        </th>
+
+        <th>
+          Location
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @testing_centers.each do |testing_center| %>
+      <tr>
+        <!-- Display testing_center.id start -->
+        <td>
+          <%= testing_center.id %>
+        </td>
+        <!-- Display testing_center.id end -->
+
+        <!-- Display testing_center.center_type_id start -->
+        <td>
+          <%= testing_center.center_type_id %>
+        </td>
+        <!-- Display testing_center.center_type_id end -->
+
+        <!-- Display testing_center.location_name start -->
+        <td>
+          <%= testing_center.location_name %>
+        </td>
+        <!-- Display testing_center.location_name end -->
+
+        <!-- Display testing_center.location start -->
+        <td>
+          <%= testing_center.location %>
+        </td>
+        <!-- Display testing_center.location end -->
+
+        <!-- Display testing_center.created_at start -->
+        <td>
+          <%= time_ago_in_words(testing_center.created_at) %> ago
+        </td>
+        <!-- Display testing_center.created_at end -->
+
+        <!-- Display testing_center.updated_at start -->
+        <td>
+          <%= time_ago_in_words(testing_center.updated_at) %> ago
+        </td>
+        <!-- Display testing_center.updated_at end -->
+
+        <td>
+          <a href="/testing_centers/<%= testing_center.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

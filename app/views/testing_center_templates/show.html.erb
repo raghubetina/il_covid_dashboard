@@ -1,0 +1,82 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Testing center #<%= @testing_center.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/testing_centers" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link testing_center start -->
+      <div class="col">
+        <a href="/testing_centers/<%= @testing_center.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit testing center
+        </a>
+      </div>
+      <!-- Edit link testing_center end -->
+
+      <!-- Delete link testing_center start -->
+      <div class="col">
+        <a href="/delete_testing_center/<%= @testing_center.id %>" class="btn btn-block btn-outline-secondary">
+          Delete testing center
+        </a>
+      </div>
+      <!-- Delete link testing_center end -->
+    </div>
+
+    <dl>
+      <dt>
+        Center type
+      </dt>
+      <!-- Display center_type_id start -->
+      <dd>
+        <%= @testing_center.center_type_id %>
+      </dd>
+      <!-- Display center_type_id end -->
+
+      <dt>
+        Location name
+      </dt>
+      <!-- Display location_name start -->
+      <dd>
+        <%= @testing_center.location_name %>
+      </dd>
+      <!-- Display location_name end -->
+
+      <dt>
+        Location
+      </dt>
+      <!-- Display location start -->
+      <dd>
+        <%= @testing_center.location %>
+      </dd>
+      <!-- Display location end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@testing_center.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@testing_center.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
