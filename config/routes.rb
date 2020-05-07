@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Center type resource:
+
+  # CREATE
+  get("/center_types/new", { :controller => "center_types", :action => "new_form" })
+  post("/create_center_type", { :controller => "center_types", :action => "create_row" })
+
+  # READ
+  get("/center_types", { :controller => "center_types", :action => "index" })
+  get("/center_types/:id_to_display", { :controller => "center_types", :action => "show" })
+
+  # UPDATE
+  get("/center_types/:prefill_with_id/edit", { :controller => "center_types", :action => "edit_form" })
+  post("/update_center_type/:id_to_modify", { :controller => "center_types", :action => "update_row" })
+
+  # DELETE
+  get("/delete_center_type/:id_to_remove", { :controller => "center_types", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Warehouse entry resource:
 
   # CREATE
