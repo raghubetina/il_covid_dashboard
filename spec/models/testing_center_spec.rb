@@ -4,6 +4,8 @@ RSpec.describe TestingCenter, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:testing_center_entries) }
+
     end
 
     describe "InDirect Associations" do
