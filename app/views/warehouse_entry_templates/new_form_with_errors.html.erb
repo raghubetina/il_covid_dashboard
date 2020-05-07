@@ -171,7 +171,7 @@
     </label>
 
     <!-- Input for warehouse_id start -->
-    <input type="text" id="warehouse_id" name="warehouse_id" class="form-control" value="<%= @warehouse_entry.warehouse_id %>">
+    <%= select_tag(:warehouse_id, options_from_collection_for_select(Warehouse.all, :id, :location_name, @warehouse_entry.warehouse_id), :class => "form-control") %>
     <!-- Input for warehouse_id end -->
   </div>
   <!-- Label and input for warehouse_id end -->
