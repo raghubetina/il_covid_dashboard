@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "warehouses#index"
   # Routes for the Lab entry resource:
 
   # CREATE
