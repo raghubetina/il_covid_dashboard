@@ -27,7 +27,7 @@
     </label>
 
     <!-- Input for lab_id start -->
-    <input type="text" id="lab_id" name="lab_id" class="form-control" value="<%= @lab_entry.lab_id %>">
+    <%= select_tag(:lab_id, options_from_collection_for_select(Lab.all, :id, :location_name, @lab_entry.lab_id), :class => "form-control") %>
     <!-- Input for lab_id end -->
   </div>
   <!-- Label and input for lab_id end -->
