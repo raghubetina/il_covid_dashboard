@@ -1,6 +1,7 @@
 class CenterTypesController < ApplicationController
   def index
-    @center_types = CenterType.page(params[:page]).per(10)
+    @q = CenterType.ransack(params[:q])
+    @center_types = @q.result(:distinct => true).includes(:testing_centers).page(params[:page]).per(10)
 
     render("center_type_templates/index.html.erb")
   end

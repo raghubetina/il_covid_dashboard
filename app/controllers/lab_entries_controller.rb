@@ -1,6 +1,7 @@
 class LabEntriesController < ApplicationController
   def index
-    @lab_entries = LabEntry.page(params[:page]).per(10)
+    @q = LabEntry.ransack(params[:q])
+    @lab_entries = @q.result(:distinct => true).includes(:lab).page(params[:page]).per(10)
 
     render("lab_entry_templates/index.html.erb")
   end

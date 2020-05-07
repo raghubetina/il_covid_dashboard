@@ -1,6 +1,7 @@
 class WarehousesController < ApplicationController
   def index
-    @warehouses = Warehouse.page(params[:page]).per(10)
+    @q = Warehouse.ransack(params[:q])
+    @warehouses = @q.result(:distinct => true).includes(:warehouse_entries).page(params[:page]).per(10)
 
     render("warehouse_templates/index.html.erb")
   end
