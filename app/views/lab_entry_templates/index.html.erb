@@ -1,0 +1,162 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All lab entries
+    </h1>
+
+    <a href="/lab_entries/new" class="btn btn-block btn-outline-secondary">
+      Add a new lab entry
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Lab
+        </th>
+
+        <th>
+          Number tests arrived 24 hour
+        </th>
+
+        <th>
+          Number tested 24 hour
+        </th>
+
+        <th>
+          Positive rate 24 hour
+        </th>
+
+        <th>
+          Percent capacity achieved 24 hour
+        </th>
+
+        <th>
+          Average hours needed to process tests 24 hour
+        </th>
+
+        <th>
+          Percent of tests in last 7 days which took longer than 24 hours
+        </th>
+
+        <th>
+          Total number tests at lab which require processing
+        </th>
+
+        <th>
+          For 24h period ending at
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @lab_entries.each do |lab_entry| %>
+      <tr>
+        <!-- Display lab_entry.id start -->
+        <td>
+          <%= lab_entry.id %>
+        </td>
+        <!-- Display lab_entry.id end -->
+
+        <!-- Display lab_entry.lab_id start -->
+        <td>
+          <%= lab_entry.lab_id %>
+        </td>
+        <!-- Display lab_entry.lab_id end -->
+
+        <!-- Display lab_entry.number_tests_arrived_24_hour start -->
+        <td>
+          <%= lab_entry.number_tests_arrived_24_hour %>
+        </td>
+        <!-- Display lab_entry.number_tests_arrived_24_hour end -->
+
+        <!-- Display lab_entry.number_tested_24_hour start -->
+        <td>
+          <%= lab_entry.number_tested_24_hour %>
+        </td>
+        <!-- Display lab_entry.number_tested_24_hour end -->
+
+        <!-- Display lab_entry.positive_rate_24_hour start -->
+        <td>
+          <%= lab_entry.positive_rate_24_hour %>
+        </td>
+        <!-- Display lab_entry.positive_rate_24_hour end -->
+
+        <!-- Display lab_entry.percent_capacity_achieved_24_hour start -->
+        <td>
+          <%= lab_entry.percent_capacity_achieved_24_hour %>
+        </td>
+        <!-- Display lab_entry.percent_capacity_achieved_24_hour end -->
+
+        <!-- Display lab_entry.average_hours_needed_to_process_tests_24_hour start -->
+        <td>
+          <%= lab_entry.average_hours_needed_to_process_tests_24_hour %>
+        </td>
+        <!-- Display lab_entry.average_hours_needed_to_process_tests_24_hour end -->
+
+        <!-- Display lab_entry.percent_of_tests_in_last_7_days_which_took_longer_than_24_hours start -->
+        <td>
+          <%= lab_entry.percent_of_tests_in_last_7_days_which_took_longer_than_24_hours %>
+        </td>
+        <!-- Display lab_entry.percent_of_tests_in_last_7_days_which_took_longer_than_24_hours end -->
+
+        <!-- Display lab_entry.total_number_tests_at_lab_which_require_processing start -->
+        <td>
+          <%= lab_entry.total_number_tests_at_lab_which_require_processing %>
+        </td>
+        <!-- Display lab_entry.total_number_tests_at_lab_which_require_processing end -->
+
+        <!-- Display lab_entry.for_24h_period_ending_at start -->
+        <td>
+          <%= lab_entry.for_24h_period_ending_at %>
+        </td>
+        <!-- Display lab_entry.for_24h_period_ending_at end -->
+
+        <!-- Display lab_entry.created_at start -->
+        <td>
+          <%= time_ago_in_words(lab_entry.created_at) %> ago
+        </td>
+        <!-- Display lab_entry.created_at end -->
+
+        <!-- Display lab_entry.updated_at start -->
+        <td>
+          <%= time_ago_in_words(lab_entry.updated_at) %> ago
+        </td>
+        <!-- Display lab_entry.updated_at end -->
+
+        <td>
+          <a href="/lab_entries/<%= lab_entry.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
